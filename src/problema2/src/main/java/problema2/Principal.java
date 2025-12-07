@@ -1,4 +1,4 @@
-package es.uclm.iso2.tarificador;
+package problema2;
 
 import java.util.Scanner;
 

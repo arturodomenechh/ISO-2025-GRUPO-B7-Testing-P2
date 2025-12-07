@@ -1,4 +1,4 @@
-package es.uclm.iso2.tarificador;
+package problema2;
 
 public class ExcepcionDatosInvalidos extends Exception {
     public ExcepcionDatosInvalidos(String mensaje) {
