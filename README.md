@@ -1,6 +1,2 @@
 # Pruebas del Problema 2
-
-Esta rama contiene el diseño de pruebas y la documentación correspondiente al Problema 2 del trabajo teórico ISO2.
-
-- Diseño de pruebas (PDF)
-- Futuras pruebas unitarias (JUnit)
+Repositorio habilitado para el Problema 2 de testing del segundo trabajo de teoría
