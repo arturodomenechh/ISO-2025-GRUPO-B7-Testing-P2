@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Tarificador – Problema 2,problema2,ExcepcionDatosInvalidos,0,4,0,0,0,2,0,1,0,1
+Tarificador – Problema 2,problema2,Tarificador,0,148,19,43,0,33,19,14,0,2
+Tarificador – Problema 2,problema2,Cliente,0,57,0,0,0,20,0,10,0,10
+Tarificador – Problema 2,problema2,Principal,110,0,0,0,29,0,2,0,2,0

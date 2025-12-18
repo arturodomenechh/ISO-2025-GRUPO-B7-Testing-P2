@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Tarificador.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Tarificador – Problema 2</a> &gt; <a href="index.source.html" class="el_package">problema2</a> &gt; <span class="el_source">Tarificador.java</span></div><h1>Tarificador.java</h1><pre class="source lang-java linenums">package problema2;
+
+<span class="fc" id="L3">public class Tarificador {</span>
+
+    public String calcularTarifa(Cliente c) throws ExcepcionDatosInvalidos {
+
+<span class="pc bpc" id="L7" title="2 of 6 branches missed.">        if (c.getEdad() &lt; 0 || c.getFrecuenciaViajes() &lt; 0 || c.getIngresos() &lt; 0) {</span>
+<span class="fc" id="L8">            throw new ExcepcionDatosInvalidos(&quot;Datos negativos no permitidos&quot;);</span>
+        }
+
+<span class="pc bpc" id="L11" title="1 of 4 branches missed.">        if (c.getEdad() &lt; 18 &amp;&amp; c.getFrecuenciaViajes() &gt;= 6) {</span>
+<span class="fc" id="L12">            return &quot;Pajarillo (10%)&quot;;</span>
+        }
+
+<span class="pc bpc" id="L15" title="1 of 4 branches missed.">        if (c.getEdad() &gt;= 18 &amp;&amp; c.getEdad() &lt;= 25 &amp;&amp;</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">            c.isEstudiaFuera() &amp;&amp;</span>
+<span class="pc bpc" id="L17" title="1 of 2 branches missed.">            c.getClase().equalsIgnoreCase(&quot;turista&quot;) &amp;&amp;</span>
+<span class="pc bpc" id="L18" title="1 of 2 branches missed.">            c.getFrecuenciaViajes() &gt;= 12) {</span>
+<span class="fc" id="L19">            return &quot;Gorrión (15%)&quot;;</span>
+        }
+
+<span class="pc bpc" id="L22" title="2 of 6 branches missed.">        if (c.getEdad() &gt;= 18 &amp;&amp; c.getEdad() &lt;= 25 &amp;&amp; c.isTrabajador()) {</span>
+
+<span class="pc bpc" id="L24" title="1 of 4 branches missed.">            if (c.isViveConPadres() &amp;&amp; c.getFrecuenciaViajes() &gt;= 3 &amp;&amp;</span>
+<span class="pc bpc" id="L25" title="1 of 2 branches missed.">                c.getClase().equalsIgnoreCase(&quot;turista&quot;)) {</span>
+
+<span class="fc" id="L27">                return &quot;Viaja ahora que puedes (5%)&quot;;</span>
+            }
+
+<span class="pc bpc" id="L30" title="1 of 2 branches missed.">            if (!c.isViveConPadres()) {</span>
+<span class="fc" id="L31">                return &quot;Atreviéndose a saltar del Nido (25%)&quot;;</span>
+            }
+        }
+
+<span class="pc bpc" id="L35" title="1 of 2 branches missed.">        if (c.getEdad() &gt; 25 &amp;&amp;</span>
+<span class="fc bfc" id="L36" title="All 4 branches covered.">            c.getIngresos() &gt; 20000 &amp;&amp; c.getIngresos() &lt; 35000 &amp;&amp;</span>
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">            c.getFrecuenciaViajes() &gt;= 6 &amp;&amp;</span>
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">            c.getClase().equalsIgnoreCase(&quot;turista&quot;) &amp;&amp;</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">            c.getDestino().equalsIgnoreCase(&quot;Europa&quot;)) {</span>
+
+<span class="fc bfc" id="L41" title="All 2 branches covered.">            if (c.isViajaConNinos()) {</span>
+<span class="fc" id="L42">                return &quot;Conoce Europa con tus peques (10%)&quot;;</span>
+            }
+<span class="fc" id="L44">            return &quot;Conoce Europa (15%)&quot;;</span>
+        }
+
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">        if (c.getEdad() &gt; 25 &amp;&amp;</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">            c.getIngresos() &gt; 35000 &amp;&amp;</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">            c.getFrecuenciaViajes() &gt;= 6 &amp;&amp;</span>
+<span class="pc bpc" id="L50" title="1 of 2 branches missed.">            c.getClase().equalsIgnoreCase(&quot;business&quot;) &amp;&amp;</span>
+<span class="pc bpc" id="L51" title="1 of 4 branches missed.">            (c.getDestino().equalsIgnoreCase(&quot;Asia&quot;) || c.getDestino().equalsIgnoreCase(&quot;America&quot;))) {</span>
+
+<span class="fc bfc" id="L53" title="All 2 branches covered.">            if (c.isViajaConNinos()) {</span>
+<span class="fc" id="L54">                return &quot;Conoce el Mundo con tus peques (10%)&quot;;</span>
+            }
+<span class="fc" id="L56">            return &quot;Conoce el Mundo (20%)&quot;;</span>
+        }
+
+<span class="fc" id="L59">        return &quot;Sin tarifa disponible&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
