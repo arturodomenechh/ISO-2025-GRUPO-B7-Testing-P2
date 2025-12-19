@@ -4,8 +4,8 @@
 
 ## 👥 Integrantes
 
-- **Arturo Domenech Castellanos**
-- **Marcos Heredia Cerro**
+- **Hugo Arévalo Llamosas**
+- **Manuel Sánchez Cabrerizo**
 
 ---
 
